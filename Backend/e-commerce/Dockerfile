@@ -9,6 +9,9 @@ RUN php artisan cache:clear
 RUN php artisan config:cache
 RUN php artisan key:generate
 RUN php artisan jwt:secret
+RUN php artisan clear-compiled
+RUN php artisan optimize
+
 
 
 CMD php artisan --host=0.0.0.0 serve
